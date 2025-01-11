@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getBooksData } from '../../data/books-data';
+import BookCard from '../../components/BookCard/BookCard';
 
 const LoadingData = () => {
 
@@ -26,8 +27,9 @@ const LoadingData = () => {
 
   return (
     <>
+    {fetchStatus === 'Awaiting a search' && <h1>Start to type and search for books!</h1>}
     {fetchStatus === 'Looking for books match' && <h1>Looking for books!</h1>}
-    {fetchStatus === 'Success!' && <p>{bookData}</p>}
+    {fetchStatus === 'Success!' && <BookCard bookData={bookData}/>}
     {fetchStatus === 'An error occured' && <h1>{error.message}Ooops, try again</h1>}
     </>
   )
