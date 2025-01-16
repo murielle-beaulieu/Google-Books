@@ -1,28 +1,24 @@
+import InfoWindow from "../InfoWindow/InfoWindow";
 import classes from "./BookCard.module.scss";
-import Modal from "./Modal";
 
 const BookCard = ({bookData}) => {
 
-  // return (
-  //   <div className={classes.book_card}>
-  //     <h3>{bookData.volumeInfo.title}</h3>
-  //     <p>by {bookData.volumeInfo.authors}</p>
-  //     <p>{bookData.volumeInfo.publishedDate}</p>
-  //     <img src={bookData.volumeInfo.imageLinks.thumbnail} alt={bookData.volumeInfo.title}></img>
-  //   </div>
-  // )
-  const openInfoWindow = () => {
+  const toggleInfoWindow = () => {
     console.log('clicked :)!')
-    return (<Modal>Hi</Modal>)
+    return(
+      <>
+      <InfoWindow />
+      </>
+    );
   }
-
-  // WITH NASA API - IN THE MEANTIME
-  return  (
-    <div className={classes.book_card} onClick={openInfoWindow}>
-    <h3>{bookData.title}</h3>
-    <img src={bookData.url} alt={bookData.title}></img>
-    <p>{bookData.date}</p>
+   return (
+    <div className={classes.book_card} onClick={toggleInfoWindow}>
+      <h3>{bookData.title}</h3>
+      <p>by {bookData.authors}</p>
+      <p>{bookData.publishedDate}</p>
+      <img src={bookData.imageLinks.thumbnail} alt={bookData.title}></img>
     </div>
+
   )
 }
 

@@ -7,15 +7,13 @@ const LoadingData = ({searchData}) => {
   const [booksData, setBooksData] = useState(null);
   const [fetchStatus, setFetchStatus] = useState('Awaiting a search');
   const [error, setError] = useState(null);
-  console.log(searchData);
 
   const fetchData = (searchData) => {
     setFetchStatus('Looking for books match');
     getBooksData(searchData)
       .then((data) => {
         setFetchStatus('Success!');
-        setBooksData(data);
-        console.log(booksData);
+        setBooksData(data.items.map((book) => book.volumeInfo));
       })
       .catch((e) => {
         setError(e);
@@ -33,10 +31,9 @@ const LoadingData = ({searchData}) => {
     <h1>Books</h1>
     {fetchStatus === 'Awaiting a search' && <h1>Start to type and search for books!</h1>}
     {fetchStatus === 'Looking for books match' && <h1>Looking for books!</h1>}
-    {fetchStatus === 'Success!' && booksData.map((bookData) => (<BookCard key={bookData.title} bookData={bookData}/>))}
+    {fetchStatus === 'Success!' && booksData.map((book) => {return <BookCard key={book.id} bookData={book}/>})}
     {fetchStatus === 'An error occured' && <h1>{error.message}Ooops, try again</h1>}
     </>
   )
 }
-
 export default LoadingData;
