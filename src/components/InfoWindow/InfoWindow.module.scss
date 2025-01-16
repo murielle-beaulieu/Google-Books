@@ -1,5 +1,12 @@
 .modal {
- height: 10em;
- width: 10em;
+ height: 30em;
+ width: 35em;
  background-color: pink;
+ position: absolute;
+ top: 10em;
+}
+
+.description {
+  height: 200px;
+  overflow: auto;
 }

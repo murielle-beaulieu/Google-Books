@@ -1,11 +1,13 @@
 .book_card {
-  height: 20em;
-  width: 15em;
+  min-height: 22em;
+  height: auto;
+  width: 20em;
   border: solid 1px black;
   text-align: center;
+  margin: 2em;
 }
 
 img {
-  height: 100px;
-  width: 110px;
+  height: 200px;
+  width: 200px;
 }

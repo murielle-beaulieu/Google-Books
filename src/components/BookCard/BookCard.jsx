@@ -1,22 +1,24 @@
 import InfoWindow from "../InfoWindow/InfoWindow";
 import classes from "./BookCard.module.scss";
+import {  useEffect, useState } from 'react';
 
 const BookCard = ({bookData}) => {
 
+  const[visible,setVisible] = useState(false);
+
+
   const toggleInfoWindow = () => {
-    console.log('clicked :)!')
-    return(
-      <>
-      <InfoWindow />
-      </>
-    );
+
+    (visible) ? setVisible(false) : setVisible(true);
   }
+
+
    return (
     <div className={classes.book_card} onClick={toggleInfoWindow}>
-      <h3>{bookData.title}</h3>
-      <p>by {bookData.authors}</p>
-      <p>{bookData.publishedDate}</p>
+      <h2>{bookData.title}</h2>
+      <h3>by {bookData.authors}</h3>
       <img src={bookData.imageLinks.thumbnail} alt={bookData.title}></img>
+      {visible && <InfoWindow bookdata={bookData} className={classes.modal}/>}
     </div>
 
   )
