@@ -17,7 +17,7 @@ const BookCard = ({bookData}) => {
     <div className={classes.book_card} onClick={toggleInfoWindow}>
       <h2>{bookData.title}</h2>
       <h3>by {bookData.authors}</h3>
-      <img src={bookData.imageLinks.thumbnail} alt={bookData.title}></img>
+      {/* <img src={bookData.imageLinks.thumbnail} alt={bookData.title}></img> */}
       {visible && <InfoWindow bookdata={bookData} className={classes.modal}/>}
     </div>
 

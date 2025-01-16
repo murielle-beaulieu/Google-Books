@@ -16,14 +16,13 @@ const SearchBar = ({onFormSubmit}) => {
   return (
     <div className={classes.search_bar}>
       <form onSubmit={handleInput} ref={formRef}>
-        <label htmlFor="bookSearch">Search:</label>
-        <input id="bookSearch"
-        type="text"
-        name='bookSearch'
-        placeholder="Search by Author, Title, Keyword, etc"
-        ></input>
         <div>
-          <button>Submit!</button>
+          <input id="bookSearch"
+          type="text"
+          name='bookSearch'
+          placeholder="Search by Author, Title, Keyword, etc"
+          ></input>
+          <button className={classes.btn}>Submit!</button>
         </div>
       </form>
     </div>
