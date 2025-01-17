@@ -27,8 +27,10 @@ function App() {
 return (
     <>
       <Header/>
-        <SearchBar onFormSubmit={onFormSubmit}/>
-        <LoadingData searchData={searchData}/>
+      <SearchBar onFormSubmit={onFormSubmit}/>
+      <main>
+        <LoadingData searchData={searchData} />
+      </main>
     </>
   )
 }

@@ -1,11 +1,11 @@
 import LoadingData from "../LoadingData/LoadingData";
 
-const DisplayContainer = () => {
+const DisplayContainer = (searchData) => {
 
 
   return (
     <>
-    <LoadingData/>
+    <LoadingData searchData={searchData}/>
     </>
   )
 }

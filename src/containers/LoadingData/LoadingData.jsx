@@ -1,6 +1,7 @@
 import {  useEffect, useState } from 'react';
 import { getBooksData } from '../../data/books-data';
 import BookCard from '../../components/BookCard/BookCard';
+import './LoadingData.module.scss'
 
 const LoadingData = ({searchData}) => {
 
@@ -28,11 +29,11 @@ const LoadingData = ({searchData}) => {
 
   return (
     <>
-    <h1>Books</h1>
-    {fetchStatus === 'Awaiting a search' && <h1>Start to type and search for books!</h1>}
-    {fetchStatus === 'Looking for books match' && <h1>Looking for books!</h1>}
-    {fetchStatus === 'Success!' && booksData.map((book) => {return <BookCard key={book.id} bookData={book}/>})}
-    {fetchStatus === 'An error occured' && <h1>{error.message}Ooops, try again</h1>}
+      {fetchStatus === 'Awaiting a search' && <h2>Start to type and search for books!</h2>}
+      {fetchStatus === 'Looking for books match' && <h2>Looking for books!</h2>}
+      {fetchStatus === 'Success!' && <header><h2>Search Results from "{<i>{searchData}</i>}"</h2></header>}
+      {fetchStatus === 'Success!' && booksData.map((book) => {return <BookCard key={book.etag} bookData={book}/>})}
+      {fetchStatus === 'An error occured' && <h2>{error.message}Ooops, try again</h2>}
     </>
   )
 }
