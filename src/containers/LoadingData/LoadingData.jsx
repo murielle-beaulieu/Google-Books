@@ -18,7 +18,7 @@ const LoadingData = ({searchData}) => {
       })
       .catch((e) => {
         setError(e);
-        setFetchStatus('An error occured');
+        setFetchStatus('Failed');
       });
     };
 
@@ -26,14 +26,13 @@ const LoadingData = ({searchData}) => {
       {(searchData.length > 0) && fetchData(searchData)};
     }, [searchData])
 
-
   return (
     <>
       {fetchStatus === 'Awaiting a search' && <h2>Start to type and search for books!</h2>}
       {fetchStatus === 'Looking for books match' && <h2>Looking for books!</h2>}
       {fetchStatus === 'Success!' && <header><h2>Search Results from "{<i>{searchData}</i>}"</h2></header>}
-      {fetchStatus === 'Success!' && booksData.map((book) => {return <BookCard key={book.etag} bookData={book}/>})}
-      {fetchStatus === 'An error occured' && <h2>{error.message}Ooops, try again</h2>}
+      {fetchStatus === 'Success!' && booksData.map((book) => (<BookCard key={searchData.id} bookdata={book}/>))}
+      {fetchStatus === 'Failed' && <h2>No results found for "{<i>{searchData}</i>}"<br /> please try again</h2>}
     </>
   )
 }

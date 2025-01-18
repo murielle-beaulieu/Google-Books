@@ -14,14 +14,14 @@ input {
 
 .btn {
   font-size: 1.5em;
-  background-color: rgb(250, 226, 230);
-  color: rgb(225, 103, 124);
+  background-color: #FFF0B3;
+  color: #FD7024;
   margin-left: 1em;
   padding: 0.5em;
   border: none;
   &:hover {
     transition: 0.3s;
-    background-color:rgb(225, 103, 124);
-    color: rgb(250, 226, 230);
+    transform: scale(1.05);
+    font-size: 1.55em;
   }
 }

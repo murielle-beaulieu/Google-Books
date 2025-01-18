@@ -6,6 +6,7 @@ import DisplayContainer from './containers/DisplayContainer/DisplayContainer'
 import Header from './components/Header/Header'
 import SearchBar from './components/SearchBar/SearchBar'
 import { getBooksData } from './data/books-data'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -16,8 +17,6 @@ function App() {
     // once we submit the form, we get the value of your input and assign to searchData
     setSearchData(data.bookSearch);
   }
-  console.log(searchData);
-
     // when there's a change to searchData (verifying that the input contains letters)
     // we call getBooksData with the value received
 // useEffect(() => {
@@ -31,6 +30,7 @@ return (
       <main>
         <LoadingData searchData={searchData} />
       </main>
+      <Footer/>
     </>
   )
 }

@@ -1,6 +1,5 @@
 .book_card {
-  min-height: 22em;
-  height: auto;
+  height: 28em;
   width: 20em;
   border: solid 1px black;
   text-align: center;
@@ -8,6 +7,14 @@
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 15em;
+  width: 15em;
+  padding: 1em;
+}
+
+.main_details {
+  height: 10em;
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
 }
