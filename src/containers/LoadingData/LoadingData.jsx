@@ -7,7 +7,7 @@ const LoadingData = ({searchData}) => {
 
   const [booksData, setBooksData] = useState(null);
   const [fetchStatus, setFetchStatus] = useState('Awaiting a search');
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   const fetchData = (searchData) => {
     setFetchStatus('Looking for books match');
@@ -31,9 +31,10 @@ const LoadingData = ({searchData}) => {
       {fetchStatus === 'Awaiting a search' && <h2>Start to type and search for books!</h2>}
       {fetchStatus === 'Looking for books match' && <h2>Looking for books!</h2>}
       {fetchStatus === 'Success!' && <header><h2>Search Results from "{<i>{searchData}</i>}"</h2></header>}
-      {fetchStatus === 'Success!' && booksData.map((book) => (<BookCard key={searchData.id} bookdata={book}/>))}
+      {fetchStatus === 'Success!' && booksData.map((book) => (<BookCard key={book.industryIdentifiers[0].identifier} bookdata={book}/>))}
       {fetchStatus === 'Failed' && <h2>No results found for "{<i>{searchData}</i>}"<br /> please try again</h2>}
     </>
   )
 }
+
 export default LoadingData;

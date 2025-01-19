@@ -9,12 +9,14 @@
 input {
   width: 16em;
   font-size: 1.5em;
+  margin-right: 2em;
   height: 2em;
+  border: 1px darkgrey solid;
 }
 
 .btn {
   font-size: 1.5em;
-  background-color: #FFF0B3;
+  background-color: white;
   color: #FD7024;
   margin-left: 1em;
   padding: 0.5em;

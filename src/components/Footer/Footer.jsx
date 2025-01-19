@@ -4,7 +4,7 @@ const Footer = () => {
 
   return (
     <footer>
-    "Read, learn, work it up, go to the literature" - Joan Didion
+    "Read, learn, work it up, go to the literature"  Joan Didion
     </footer>
   )
 }

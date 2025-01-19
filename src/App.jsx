@@ -27,9 +27,7 @@ return (
     <>
       <Header/>
       <SearchBar onFormSubmit={onFormSubmit}/>
-      <main>
-        <LoadingData searchData={searchData} />
-      </main>
+      <DisplayContainer searchData={searchData}/>
       <Footer/>
     </>
   )

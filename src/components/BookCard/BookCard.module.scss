@@ -1,20 +1,35 @@
 .book_card {
-  height: 28em;
+  height: 29em;
   width: 20em;
-  border: solid 1px black;
+  // background-color: #FFF0B3;
+  // background-color: #cfd7ff;
+  background-color: #d0c1fe;
+  color: #ffffff;
   text-align: center;
+  padding: 2em;
   margin: 2em;
+  border-radius: 10px;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
 }
 
 img {
-  height: 15em;
-  width: 15em;
+  height: 19em;
+  width: 19em;
   padding: 1em;
 }
 
 .main_details {
-  height: 10em;
+  height: 8em;
   display: inline-block;
   justify-content: center;
   align-content: center;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
