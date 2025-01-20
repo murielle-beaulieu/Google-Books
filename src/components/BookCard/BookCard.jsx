@@ -16,10 +16,10 @@ const BookCard = ({bookdata}) => {
       <section className={classes.main_details}>
         <h2 className={classes.title}>{bookdata.title}</h2>
         {!bookdata.authors && <h3 className={classes.unknown}> by Unknow Authors</h3>}
-        {bookdata.authors && <h3>by {bookdata.authors.join(", ")}</h3>}
+        {bookdata.authors && <h3 className={classes.authors}>by {bookdata.authors.join(", ")}</h3>}
       </section>
-        {bookdata.imageLinks?.thumbnail && <img src={bookdata.imageLinks.thumbnail} alt={bookdata.title}></img>}
-        {!bookdata.imageLinks?.thumbnail && <img src="./src/assets/placeholder-book.png" alt={bookdata.title}></img>}
+      {bookdata.imageLinks?.thumbnail && <img src={bookdata.imageLinks.thumbnail} alt={bookdata.title}></img>}
+      {!bookdata.imageLinks?.thumbnail && <img src="./src/assets/placeholder-book.png" alt={bookdata.title}></img>}
       {visible && <InfoWindow bookdata={bookdata} className={classes.modal}/>}
     </div>
 

@@ -5,8 +5,11 @@ header {
 }
 
 main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
