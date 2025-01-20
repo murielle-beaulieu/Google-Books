@@ -1,0 +1,30 @@
+@keyframes fade {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.98);
+    opacity: 0.45;
+  }
+}
+
+.skelly {
+  animation: fade 2s ease-in-out infinite;
+  height: 29em;
+  width: 20em;
+  background-color: #dcd1fd;
+  padding: 2em;
+  margin: 2em;
+  border-radius: 10px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,10 +1,10 @@
-import './Header.module.scss'
+import classes from './Header.module.scss'
 
 const Header = () => {
+
   return (
     <header>
-      <h1>Welcome to Google Books</h1>
-      <h2>Please start your search by typing a title or author</h2>
+      <h1 id={classes.main_title}>Google Books</h1>
     </header>
   )
 }
