@@ -1,11 +1,6 @@
 # Google Books Project
 
-## Demo & Snippets
-
--   Include hosted link
--   Include images of app if CLI or Client App
-
----
+- Using the Google API, this project consolidate what we learned with React sor far!
 
 ## Requirements / Purpose
 
@@ -37,38 +32,33 @@ Application Design (required):
 
 ## Design Goals / Approach
 
--   Chose soft colours, sort of pastel colours and bold clear text
+-   Chose soft colours, sort of a pastel palette and bold clear text
 
 ---
 
 ## Features
 
--   What features does the project have?
--   list them...
+-   Search bar
+-   Display of loading skeletons during the API call
+-   Display of book cards for each result
+-   Display of a 'modal' as an info window that opens when you click on a result
 
 ---
 
 ## Known issues
 
--   Remaining bugs, things that have been left unfixed
--   Features that are buggy / flimsy
+-   There has been a case where while searching for a book, I have received two results. They were different by ID, but otherwise same author/title/publication date/cover (book in question is Intermezzo by Sally Rooney)
 
 ---
 
 ## Future Goals
 
--   What are the immediate features you'd add given more time
+-   Would be interested in implementing pagination to display more results
 
 ---
 
 ## Change logs
 
 - n/a
-
----
-
-## What did you struggle with?
-
--   What? Why? How?
 
 ---
