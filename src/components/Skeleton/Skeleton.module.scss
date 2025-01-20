@@ -13,18 +13,47 @@
   }
 }
 
-.skelly {
-  animation: fade 2s ease-in-out infinite;
-  height: 29em;
-  width: 20em;
-  background-color: #dcd1fd;
-  padding: 2em;
-  margin: 2em;
-  border-radius: 10px;
-}
-
 .title {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+//SM SCREEN
+@media (min-width: 620px) and (max-width:819px) {
+  .skelly {
+    animation: fade 2s ease-in-out infinite;
+    height: 22em;
+    width: 24em;
+    background-color: #dcd1fd;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 10px;
+  }
+}
+
+// MD SCREEN
+@media (min-width: 620px) and (max-width:1100px) {
+  .skelly {
+    animation: fade 2s ease-in-out infinite;
+    height: 32em;
+    width: 24em;
+    background-color: #dcd1fd;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 10px;
+  }
+}
+
+//LG SCREEN
+@media (min-width: 1101px) {
+  .skelly {
+    animation: fade 2s ease-in-out infinite;
+    height: 36em;
+    width: 24em;
+    background-color: #dcd1fd;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 10px;
+  }
 }

@@ -8,7 +8,6 @@ const LoadingData = ({searchData}) => {
 
   const [booksData, setBooksData] = useState(null);
   const [fetchStatus, setFetchStatus] = useState('Awaiting a search');
-  // const [error, setError] = useState(null);
 
   const fetchData = (searchData) => {
     setFetchStatus('Looking for books match');
@@ -39,5 +38,3 @@ const LoadingData = ({searchData}) => {
 }
 
 export default LoadingData;
-
-// key={book.industryIdentifiers[0].identifier}
