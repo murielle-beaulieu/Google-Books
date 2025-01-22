@@ -15,9 +15,6 @@ const SearchBar = ({onFormSubmit}) => {
 
     const { isValid, errors } = validation(formValues);
 
-    console.log(isValid);
-    console.log(errors);
-
     if (isValid === true) {
       onFormSubmit(formValues);
       form.reset();
