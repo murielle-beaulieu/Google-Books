@@ -14,10 +14,9 @@ const LoadingData = ({searchData}) => {
     getBooksData(searchData)
       .then((data) => {
         setFetchStatus('Success!');
-        setBooksData(data.items.map((book) => book));
+        setBooksData(data.items);
       })
       .catch((e) => {
-        setError(e);
         setFetchStatus('Failed');
       });
     };
@@ -27,13 +26,13 @@ const LoadingData = ({searchData}) => {
     }, [searchData])
 
   return (
-    <>
+    <main>
       {fetchStatus === 'Awaiting a search' && <h2>Start to type and search for books!</h2>}
       {fetchStatus === 'Looking for books match' && <Skeleton/>}
       {fetchStatus === 'Success!' && <header><h2>Search Results from "{<i>{searchData}</i>}"</h2></header>}
       {fetchStatus === 'Success!' && booksData.map((book) => (<BookCard key={book.id} bookdata={book.volumeInfo}/>))}
       {fetchStatus === 'Failed' && <h2>No results found for "{<i>{searchData}</i>}"<br /> please try again</h2>}
-    </>
+    </main>
   )
 }
 
